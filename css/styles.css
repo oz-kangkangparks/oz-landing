@@ -1,33 +1,34 @@
 /* CSS Variables - 브랜딩 컬러 */
 :root {
     /* Primary Colors */
-    --color-navy: #2C3E50;
-    --color-navy-light: #34495E;
-    --color-cream: #FFF5E6;
-    --color-cream-light: #FFFAF5;
-    
+    --color-navy: #2c3e50;
+    --color-navy-light: #34495e;
+    --color-cream: #fff5e6;
+    --color-cream-light: #fffaf5;
+
     /* Emotion Colors */
-    --color-sad: #6C7A89;
-    --color-angry: #E74C3C;
-    --color-neutral: #95A5A6;
-    --color-happy: #F39C12;
-    --color-very-happy: #F1C40F;
-    
+    --color-sad: #6c7a89;
+    --color-angry: #e74c3c;
+    --color-neutral: #95a5a6;
+    --color-happy: #f39c12;
+    --color-very-happy: #f1c40f;
+
     /* Neutral Colors */
-    --color-white: #FFFFFF;
-    --color-black: #2C2C2C;
-    --color-gray-100: #F8F9FA;
-    --color-gray-200: #E9ECEF;
-    --color-gray-300: #DEE2E6;
-    --color-gray-400: #CED4DA;
-    --color-gray-500: #ADB5BD;
-    --color-gray-600: #6C757D;
+    --color-white: #ffffff;
+    --color-black: #2c2c2c;
+    --color-gray-100: #f8f9fa;
+    --color-gray-200: #e9ecef;
+    --color-gray-300: #dee2e6;
+    --color-gray-400: #ced4da;
+    --color-gray-500: #adb5bd;
+    --color-gray-600: #6c757d;
     --color-gray-700: #495057;
-    --color-gray-800: #343A40;
+    --color-gray-800: #343a40;
     --color-gray-900: #212529;
-    
+
     /* Typography */
-    --font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -37,7 +38,7 @@
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
-    
+
     /* Spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
@@ -46,18 +47,20 @@
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
     --spacing-3xl: 4rem;
-    
+
     /* Border Radius */
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
     --radius-full: 9999px;
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
     --transition-base: 300ms ease-in-out;
@@ -65,7 +68,9 @@
 }
 
 /* CSS Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -87,18 +92,32 @@ body {
     background-color: var(--color-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: "Gowun Dodum", sans-serif;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
     font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
 }
 
@@ -134,40 +153,61 @@ button {
 }
 
 /* Typography */
-h1, .h1 {
+h1,
+.h1 {
     font-size: var(--font-size-5xl);
     font-weight: 700;
     line-height: 1.2;
 }
 
-h2, .h2 {
+h2,
+.h2 {
     font-size: var(--font-size-4xl);
     font-weight: 700;
     line-height: 1.3;
 }
 
-h3, .h3 {
+h3,
+.h3 {
     font-size: var(--font-size-3xl);
     font-weight: 600;
     line-height: 1.4;
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: var(--font-size-2xl);
     font-weight: 600;
     line-height: 1.4;
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-size: var(--font-size-xl);
     font-weight: 600;
     line-height: 1.5;
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-size: var(--font-size-lg);
     font-weight: 600;
     line-height: 1.5;
+}
+
+/* 스크롤 시 부드럽게 나타나는 효과 */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* 모바일 메뉴가 열렸을 때 배경 스크롤 방지 */
+.no-scroll {
+    overflow: hidden;
 }
 
 /* Media Queries */
@@ -178,11 +218,11 @@ h6, .h6 {
         --font-size-3xl: 1.5rem;
         --font-size-2xl: 1.25rem;
     }
-    
+
     .container {
         padding: 0 var(--spacing-sm);
     }
-    
+
     .section {
         padding: var(--spacing-2xl) 0;
     }
