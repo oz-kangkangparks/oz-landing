@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>오늘은 퇴근하세요</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Google Fonts (Gowun Dodum) -->
+        <title>오늘은 퇴근하세요 - 지친 대표님을 위한 셀프케어 앱</title>
+
+        <!-- Google Fonts: Gowun Dodum -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -13,186 +13,112 @@
             rel="stylesheet"
         />
 
-        <!-- Tailwind CSS Custom Configuration -->
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            "navy-calm": "#2c3e50",
-                            "cream-warm": "#fffaf0",
-                        },
-                        fontFamily: {
-                            sans: ["Gowun Dodum", "sans-serif"],
-                        },
-                    },
-                },
-            };
-        </script>
-
-        <!-- 폰트 프리로드 최적화 -->
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-        <link
-            rel="preload"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-
-        <!-- 스타일시트 -->
-        <link rel="stylesheet" href="css/fonts.css" />
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="css/styles.css" />
     </head>
-    <body class="bg-cream-warm text-navy-calm">
+    <body>
         <!-- 상단 메뉴 (Navigation Bar) -->
-        <nav
-            id="navbar"
-            class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6"
-        >
-            <div
-                class="max-w-7xl mx-auto px-6 flex justify-between items-center"
-            >
-                <a href="#" class="text-xl font-bold">오늘은 퇴근하세요</a>
-
-                <ul class="hidden md:flex items-center space-x-8 text-base">
+        <nav class="navbar" id="navbar">
+            <div class="container nav-container">
+                <a href="#" class="nav-logo">오늘은 퇴근하세요</a>
+                <ul class="nav-menu">
+                    <li><a href="#empathy">공감</a></li>
+                    <li><a href="#features">핵심 기능</a></li>
+                    <li><a href="#philosophy">앱의 철학</a></li>
                     <li>
-                        <a
-                            href="#empathy"
-                            class="hover:text-navy-calm/70 transition-colors"
-                            >공감</a
+                        <a href="#pre-register" class="nav-cta-button"
+                            >사전 등록</a
                         >
-                    </li>
-                    <li>
-                        <a
-                            href="#features"
-                            class="hover:text-navy-calm/70 transition-colors"
-                            >핵심 기능</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#philosophy"
-                            class="hover:text-navy-calm/70 transition-colors"
-                            >앱의 철학</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#pre-register"
-                            class="bg-navy-calm text-cream-warm font-bold px-5 py-2 rounded-full hover:bg-navy-calm/90 transition-colors"
-                        >
-                            사전 등록
-                        </a>
                     </li>
                 </ul>
-
-                <button id="mobile-menu-button" class="md:hidden z-50">
+                <button
+                    class="mobile-menu-button"
+                    id="mobile-menu-button"
+                    aria-label="메뉴 열기"
+                >
                     <svg
-                        class="w-6 h-6"
+                        id="menu-open-icon"
                         fill="none"
-                        stroke="currentColor"
                         viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="currentColor"
+                        stroke-width="2"
                     >
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="2"
                             d="M4 6h16M4 12h16m-4 6h10"
-                        ></path>
+                        />
+                    </svg>
+                    <svg
+                        id="menu-close-icon"
+                        class="hidden"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
                     </svg>
                 </button>
             </div>
         </nav>
 
         <!-- 모바일 메뉴 (전체 화면) -->
-        <div
-            id="mobile-menu"
-            class="hidden fixed inset-0 bg-cream-warm z-40 flex flex-col justify-center items-center"
-        >
-            <ul class="space-y-10 text-2xl text-center">
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
                 <li><a href="#empathy" class="mobile-link">공감</a></li>
                 <li><a href="#features" class="mobile-link">핵심 기능</a></li>
                 <li><a href="#philosophy" class="mobile-link">앱의 철학</a></li>
                 <li>
-                    <a
-                        href="#pre-register"
-                        class="mobile-link mt-8 inline-block bg-navy-calm text-cream-warm font-bold px-8 py-4 rounded-full"
+                    <a href="#pre-register" class="nav-cta-button mobile-link"
+                        >사전 등록하기</a
                     >
-                        사전 등록하기
-                    </a>
                 </li>
             </ul>
         </div>
 
         <!-- 1. 인트로 (Hero Section) -->
-        <header
-            class="min-h-screen flex flex-col justify-center items-center text-center p-8"
-        >
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-                    대표님, 오늘은 정말<br class="md:hidden" />
-                    퇴근하셔야 해요.
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-navy-calm/80">
+        <header class="hero">
+            <div class="container text-center">
+                <h1>대표님, 오늘은 정말<br />퇴근하셔야 해요.</h1>
+                <p class="hero-subtitle">
                     번아웃과 싸우는 1인 사업자와 스타트업 대표를 위한<br />가장
                     다정한 셀프케어 도우미, '오늘은 퇴근하세요'
                 </p>
-                <a
-                    href="#pre-register"
-                    class="mt-10 inline-block bg-navy-calm text-cream-warm font-bold px-8 py-4 rounded-full text-lg hover:bg-navy-calm/90 transition-colors duration-300"
+                <a href="#pre-register" class="hero-button"
+                    >사전 등록하고 출시 알림 받기</a
                 >
-                    사전 등록하고 출시 알림 받기
-                </a>
             </div>
         </header>
 
         <main>
             <!-- 2. 공감대 형성 (Problem & Empathy) -->
-            <section id="empathy" class="py-20 md:py-32 fade-in-section">
-                <div class="max-w-2xl mx-auto px-6 text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold">
+            <section id="empathy" class="section">
+                <div class="container fade-in-section">
+                    <h2 class="section-title text-center">
                         혹시, 당신의 이야기인가요?
                     </h2>
-                    <div class="mt-10 text-left space-y-4 text-lg md:text-xl">
-                        <div
-                            class="flex items-start p-4 bg-white/50 rounded-lg"
-                        >
-                            <span class="mr-4 mt-1">✓</span>
+                    <div class="checklist">
+                        <div class="check-item">
+                            <span>✓</span>
                             <p>
                                 밤낮없이 일에만 매달려 정작 내 마음을 돌볼
                                 여유가 없어요.
                             </p>
                         </div>
-                        <div
-                            class="flex items-start p-4 bg-white/50 rounded-lg"
-                        >
-                            <span class="mr-4 mt-1">✓</span>
+                        <div class="check-item">
+                            <span>✓</span>
                             <p>
                                 과거의 실패나 실수 때문에 마음 한구석이 늘
                                 무거워요.
                             </p>
                         </div>
-                        <div
-                            class="flex items-start p-4 bg-white/50 rounded-lg"
-                        >
-                            <span class="mr-4 mt-1">✓</span>
+                        <div class="check-item">
+                            <span>✓</span>
                             <p>
                                 "이만하면 됐어", "잘하고 있어" 라는 따뜻한
                                 위로가 필요해요.
@@ -203,125 +129,200 @@
             </section>
 
             <!-- 3. 해결책 제시 (Core Features & Benefits) -->
-            <section
-                id="features"
-                class="py-20 md:py-32 bg-white/70 fade-in-section"
-            >
-                <div class="max-w-5xl mx-auto px-6 text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold">
-                        당신의 곁을 지켜줄게요
-                    </h2>
-                    <p class="mt-4 text-lg text-navy-calm/80">
+            <!-- index.html 파일의 features 섹션을 아래 코드로 교체하세요. -->
+
+            <section id="features" class="section">
+                <div class="container text-center fade-in-section">
+                    <h2 class="section-title">당신의 곁을 지켜줄게요</h2>
+                    <p class="section-subtitle">
                         '오늘은 퇴근하세요'는 세 가지 방법으로 당신의 마음을
                         돌봅니다.
                     </p>
-                    <div
-                        class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-left"
-                    >
-                        <div class="bg-cream-warm p-8 rounded-xl shadow-lg">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-10 w-10 mb-4 text-navy-calm/50"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                                />
-                            </svg>
-                            <h3 class="text-2xl font-bold">
-                                하루 한 번, 감정 기록
-                            </h3>
-                            <p class="mt-2 text-navy-calm/80">
-                                잊고 지냈던 내 감정을 선택하고 기록하며 단단한
-                                하루를 만드세요. 감정 변화 그래프로 나를 돌아볼
-                                수 있어요.
-                            </p>
+
+                    <div class="feature-grid">
+                        <!-- 기능 1: 감정 기록 -->
+                        <div class="feature-item">
+                            <div class="feature-text">
+                                <h3>하루 한 번, 감정 기록</h3>
+                                <p>
+                                    잊고 지냈던 내 감정을 선택하고 기록하며
+                                    단단한 하루를 만드세요. 감정 변화 그래프로
+                                    나를 돌아볼 수 있어요.
+                                </p>
+                            </div>
+                            <div class="feature-image">
+                                <div class="mockup-phone">
+                                    <div class="mockup-screen">
+                                        <div class="mockup-header">
+                                            오늘의 마음은 어땠나요?
+                                        </div>
+                                        <div class="emotion-picker">
+                                            <span>😢</span><span>😡</span
+                                            ><span class="selected">😐</span
+                                            ><span>🙂</span><span>😄</span>
+                                        </div>
+                                        <div class="mockup-subheader">
+                                            주간 감정 그래프
+                                        </div>
+                                        <div class="graph-container">
+                                            <div
+                                                class="bar"
+                                                style="
+                                                    height: 40%;
+                                                    background-color: #ffafcc;
+                                                "
+                                            ></div>
+                                            <div
+                                                class="bar"
+                                                style="
+                                                    height: 20%;
+                                                    background-color: #ffc09f;
+                                                "
+                                            ></div>
+                                            <div
+                                                class="bar"
+                                                style="
+                                                    height: 60%;
+                                                    background-color: #ffee93;
+                                                "
+                                            ></div>
+                                            <div
+                                                class="bar"
+                                                style="
+                                                    height: 75%;
+                                                    background-color: #d9ed92;
+                                                "
+                                            ></div>
+                                            <div
+                                                class="bar"
+                                                style="
+                                                    height: 50%;
+                                                    background-color: #a7c5eb;
+                                                "
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-cream-warm p-8 rounded-xl shadow-lg">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-10 w-10 mb-4 text-navy-calm/50"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                                />
-                            </svg>
-                            <h3 class="text-2xl font-bold">
-                                가장 다정한 퇴근 신호
-                            </h3>
-                            <p class="mt-2 text-navy-calm/80">
-                                정해진 시간에 울리는 알림이 일과 삶의 균형을
-                                찾아줄 거예요. 망설이지 말고 오늘은 '진짜'
-                                퇴근하세요.
-                            </p>
+
+                        <!-- 기능 2: 퇴근 알림 -->
+                        <div class="feature-item reverse">
+                            <div class="feature-text">
+                                <h3>가장 다정한 퇴근 신호</h3>
+                                <p>
+                                    정해진 시간에 울리는 알림이 일과 삶의 균형을
+                                    찾아줄 거예요. 망설이지 말고 오늘은 '진짜'
+                                    퇴근하세요.
+                                </p>
+                            </div>
+                            <div class="feature-image">
+                                <div class="mockup-phone">
+                                    <div
+                                        class="mockup-screen notification-screen"
+                                    >
+                                        <div class="notification">
+                                            <div class="notification-header">
+                                                <span>🐻</span>
+                                                <p>오늘은 퇴근하세요</p>
+                                            </div>
+                                            <div class="notification-body">
+                                                <p>
+                                                    정말 고생 많았어요, 대표님.
+                                                </p>
+                                                <p>
+                                                    이제는 당신의 마음을 돌볼
+                                                    시간이에요.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-cream-warm p-8 rounded-xl shadow-lg">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-10 w-10 mb-4 text-navy-calm/50"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                                />
-                            </svg>
-                            <h3 class="text-2xl font-bold">
-                                실패는 끝이 아니에요
-                            </h3>
-                            <p class="mt-2 text-navy-calm/80">
-                                위대한 사람들의 실패 경험이 당신에게 작은 용기를
-                                줄 거예요. 혼자가 아니라는 걸 느껴보세요.
-                            </p>
+
+                        <!-- 기능 3: 실패 명언 카드 -->
+                        <div class="feature-item">
+                            <div class="feature-text">
+                                <h3>실패는 끝이 아니에요</h3>
+                                <p>
+                                    위대한 사람들의 실패 경험이 당신에게 작은
+                                    용기를 줄 거예요. 혼자가 아니라는 걸
+                                    느껴보세요.
+                                </p>
+                            </div>
+                            <div class="feature-image">
+                                <div class="mockup-phone">
+                                    <div class="mockup-screen dark">
+                                        <div class="quote-card-wrapper">
+                                            <div class="quote-card">
+                                                <p class="quote">
+                                                    "나는 실패하지 않았다.<br />나는
+                                                    단지 효과가 없는<br />만
+                                                    가지 방법을 찾았을 뿐이다."
+                                                </p>
+                                                <p class="author">
+                                                    - 토머스 에디슨 -
+                                                </p>
+                                            </div>
+                                            <div class="quote-actions">
+                                                <svg
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                    ></path>
+                                                </svg>
+                                                <svg
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. 앱의 철학 및 톤앤매너 (Brand Philosophy) -->
-            <section id="philosophy" class="py-20 md:py-32 fade-in-section">
-                <div
-                    class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
-                >
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="text-3xl md:text-4xl font-bold">
-                            우리는 다그치지 않아요.<br />그저 담담하게 위로를
-                            건넬 뿐.
-                        </h2>
-                        <p class="mt-6 text-lg text-navy-calm/80">
-                            '오늘은 퇴근하세요'는 화려한 성공이 아닌, 묵묵히
-                            걸어가는 당신의 과정에 집중합니다. 부드러운 색감과
-                            둥근 글씨체, 그리고 당신의 감정에 반응하는 작은
-                            마스코트가 조용히 곁을 지켜줄 거예요.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2">
-                        <div class="bg-white p-4 rounded-2xl shadow-2xl">
-                            <div
-                                class="bg-navy-calm p-8 rounded-lg text-cream-warm text-center"
-                            >
-                                <span class="text-6xl">🐻</span>
-                                <p class="mt-4 font-bold text-xl">
-                                    "오늘 하루도 정말 고생 많으셨어요."
-                                </p>
-                                <p class="mt-2 text-cream-warm/70">
-                                    따뜻한 차 한 잔 어떠세요?
-                                </p>
+            <!-- 4. 앱의 철학 (Brand Philosophy) -->
+            <section id="philosophy" class="section">
+                <div class="container fade-in-section">
+                    <div class="philosophy-wrapper">
+                        <div class="philosophy-text">
+                            <h2>
+                                우리는 다그치지 않아요.<br />그저 담담하게
+                                위로를 건넬 뿐.
+                            </h2>
+                            <p>
+                                '오늘은 퇴근하세요'는 화려한 성공이 아닌, 묵묵히
+                                걸어가는 당신의 과정에 집중합니다. 부드러운
+                                색감과 둥근 글씨체, 그리고 당신의 감정에
+                                반응하는 작은 마스코트가 조용히 곁을 지켜줄
+                                거예요.
+                            </p>
+                        </div>
+                        <div class="philosophy-image">
+                            <div class="card">
+                                <div class="card-inner">
+                                    <span class="card-emoji">🐻</span>
+                                    <p>"오늘 하루도 정말 고생 많으셨어요."</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -329,57 +330,43 @@
             </section>
 
             <!-- 5. 마지막 행동 유도 (Final CTA) -->
-            <section
-                id="pre-register"
-                class="py-20 md:py-32 bg-navy-calm text-cream-warm text-center fade-in-section"
-            >
-                <div class="max-w-2xl mx-auto px-6">
-                    <h2 class="text-3xl md:text-4xl font-bold">
+            <section id="pre-register" class="section cta-section">
+                <div class="container text-center fade-in-section">
+                    <h2 class="section-title">
                         이제, 나를 위한 퇴근을 시작해볼까요?
                     </h2>
-                    <p class="mt-4 text-lg text-cream-warm/80">
+                    <p class="section-subtitle">
                         가장 먼저 앱 출시 소식을 받아보세요.<br />사전
                         등록해주신 분들께는 특별한 혜택을 드릴 예정입니다.
                     </p>
-                    <form class="mt-10 max-w-lg mx-auto flex">
+                    <form
+                        class="cta-form"
+                        onsubmit="alert('신청해주셔서 감사합니다!'); return false;"
+                    >
                         <input
                             type="email"
                             placeholder="대표님의 이메일 주소"
                             required
-                            class="w-full px-6 py-4 rounded-l-full bg-cream-warm/20 placeholder-cream-warm/60 border-0 focus:ring-2 focus:ring-cream-warm transition text-cream-warm"
                         />
-                        <button
-                            type="submit"
-                            class="bg-cream-warm text-navy-calm font-bold px-8 py-4 rounded-r-full hover:bg-cream-warm/90 transition-colors"
-                        >
-                            알림 신청
-                        </button>
+                        <button type="submit">알림 신청</button>
                     </form>
                 </div>
             </section>
         </main>
 
         <!-- 푸터 (Footer) -->
-        <footer class="text-center py-10 px-6">
-            <p class="text-navy-calm/70">
-                © 2025 오늘은 퇴근하세요. All Rights Reserved.
-            </p>
-            <div class="mt-2">
-                <a
-                    href="#"
-                    class="text-sm text-navy-calm/50 hover:text-navy-calm"
-                    >이용약관</a
-                >
-                <span class="mx-2 text-navy-calm/30">|</span>
-                <a
-                    href="#"
-                    class="text-sm text-navy-calm/50 hover:text-navy-calm"
-                    >개인정보처리방침</a
-                >
+        <footer class="footer">
+            <div class="container text-center">
+                <p>© 2025 오늘은 퇴근하세요. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">이용약관</a>
+                    <span>|</span>
+                    <a href="#">개인정보처리방침</a>
+                </div>
             </div>
         </footer>
 
-        <script src="js/main.js"></script>
+        <!-- Scripts -->
         <script src="js/custom.js"></script>
     </body>
 </html>
