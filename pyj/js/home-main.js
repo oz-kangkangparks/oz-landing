@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 오늘의 감정 기록하기 버튼
     logEmotionBtn.addEventListener("click", () => {
-        alert("감정 기록 화면으로 이동합니다.");
+        //alert("감정 기록 화면으로 이동합니다.");
+        this.location.href = "../../kangjinil/index.html";
     });
 
     // 하단 네비게이션
@@ -22,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     navEmotionLog.addEventListener("click", () => {
-        alert("감정 기록 화면으로 이동합니다.");
+        // alert("감정 기록 화면으로 이동합니다.");
     });
 
     navAlarm.addEventListener("click", () => {
-        alert("퇴근 알림 설정 화면으로 이동합니다.");
+        // alert("퇴근 알림 설정 화면으로 이동합니다.");
     });
 
     navQuotes.addEventListener("click", () => {

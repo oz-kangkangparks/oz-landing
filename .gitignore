@@ -37,3 +37,7 @@ build/
 *.tmp
 *.temp
 .cache/
+
+# Project specific
+kangjinil/.claude.md
+doc/

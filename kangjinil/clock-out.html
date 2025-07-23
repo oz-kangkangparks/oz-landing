@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>가장 다정한 퇴근 신호 - 오늘은 퇴근하세요</title>
+
+        <!-- Google Fonts: Gowun Dodum -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="clock-out.css" />
+    </head>
+    <body>
+        <!-- 상단 메뉴 -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../index.html" class="nav-logo">오늘은 퇴근하세요</a>
+            </div>
+        </nav>
+
+        <!-- 메인 화면 -->
+        <div id="main-screen" class="screen active">
+            <main class="main-content">
+                <div class="container">
+                <div class="header-section text-center">
+                    <h1 class="page-title">가장 다정한 퇴근 신호</h1>
+                    <p class="page-subtitle">
+                        매일 정해진 시간에 따뜻한 퇴근 메시지를 받아보세요.<br />
+                        일과 삶의 균형을 찾는 첫걸음입니다.
+                    </p>
+                </div>
+
+                <div class="form-card">
+                    <form id="clock-out-form">
+                        <!-- 요일 선택 -->
+                        <div class="form-group">
+                            <label class="form-label">알림 받을 요일</label>
+                            <div class="weekday-selector">
+                                <label class="weekday-item">
+                                    <input type="checkbox" name="weekday" value="Sun" />
+                                    <span class="weekday-label">일</span>
+                                </label>
+                                <label class="weekday-item">
+                                    <input type="checkbox" name="weekday" value="Mon" />
+                                    <span class="weekday-label">월</span>
+                                </label>
+                                <label class="weekday-item">
+                                    <input type="checkbox" name="weekday" value="Tue" />
+                                    <span class="weekday-label">화</span>
+                                </label>
+                                <label class="weekday-item">
+                                    <input type="checkbox" name="weekday" value="Wed" />
+                                    <span class="weekday-label">수</span>
+                                </label>
+                                <label class="weekday-item">
+                                    <input type="checkbox" name="weekday" value="Thu" />
+                                    <span class="weekday-label">목</span>
+                                </label>
+                                <label class="weekday-item">
+                                    <input type="checkbox" name="weekday" value="Fri" />
+                                    <span class="weekday-label">금</span>
+                                </label>
+                                <label class="weekday-item">
+                                    <input type="checkbox" name="weekday" value="Sat" />
+                                    <span class="weekday-label">토</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 퇴근 시간 설정 -->
+                        <div class="form-group">
+                            <label for="clock-out-time" class="form-label">퇴근 시간</label>
+                            <input
+                                type="time"
+                                id="clock-out-time"
+                                class="form-input"
+                                required
+                            />
+                            <p class="form-help">알림을 받고 싶은 퇴근 시간을 설정해주세요.</p>
+                        </div>
+
+                        <!-- 버튼 그룹 -->
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-primary">
+                                저장
+                            </button>
+                            <button type="button" id="test-message-btn" class="btn btn-secondary">
+                                메시지 예시
+                            </button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- 메시지 결과 화면 -->
+        <div id="message-screen" class="screen">
+            <div class="message-screen-header">
+                <button id="back-button" class="back-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    돌아가기
+                </button>
+                <h2 class="message-screen-title">퇴근 메시지</h2>
+            </div>
+            <div class="message-result-content">
+                <div class="result-image">
+                    <img src="assets/images/나는자유다.jpg" alt="자유로운 이미지" />
+                </div>
+                <div class="result-message">
+                    <p id="display-message"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 설정 저장 알림 -->
+        <div id="save-notification" class="save-notification hidden">
+            설정이 저장되었습니다!
+        </div>
+
+        <!-- JavaScript -->
+        <script src="clock-out.js"></script>
+    </body>
+</html>

@@ -32,13 +32,15 @@ body {
     color: var(--color-navy);
     line-height: 1.6;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Container */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 /* Screen Management */
@@ -54,41 +56,46 @@ body {
 /* App Header */
 .app-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .app-header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
     color: rgba(44, 62, 80, 0.7);
-    font-size: 1.125rem;
+    font-size: 0.875rem;
+}
+
+/* Emotion Record Form */
+.emotion-record-form {
+    width: 100%;
 }
 
 /* Emotion Selector */
 .emotion-selector {
     display: flex;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 8px;
     margin-bottom: 2rem;
-    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0;
 }
 
 .emotion-option {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.75rem;
-    background-color: var(--color-white);
+    padding: 8px 4px;
+    background-color: transparent;
     border-radius: var(--radius-lg);
     cursor: pointer;
     transition: all var(--transition-base);
     border: 2px solid transparent;
-    flex: 1;
-    max-width: 100px;
+    flex: 0 0 auto;
 }
 
 .emotion-option:hover {
@@ -103,18 +110,27 @@ body {
 
 .emotion-emoji {
     font-size: 2.5rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 4px;
+    line-height: 1;
+    display: block;
 }
 
 .emotion-label {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: var(--color-gray-600);
     text-align: center;
+    line-height: 1.2;
+    display: block;
 }
 
 /* Modal Emotion Selector */
+.modal-emotion-selector {
+    gap: 0;
+}
+
 .modal-emotion-selector .emotion-option {
-    padding: 0.75rem;
+    padding: 0.25rem;
+    margin: 0 -4px;
 }
 
 .modal-emotion-selector .emotion-emoji {
@@ -314,6 +330,16 @@ body {
     gap: 0.5rem;
 }
 
+/* Modal button sizes */
+.modal-buttons .btn-danger {
+    width: 80px;
+}
+
+.modal-buttons .btn-secondary,
+.modal-buttons .btn-primary {
+    width: 80px;
+}
+
 /* Responsive */
 @media (max-width: 640px) {
     .container {
@@ -322,13 +348,45 @@ body {
     
     .emotion-selector {
         gap: 0.5rem;
-        overflow-x: auto;
+        overflow-x: hidden;
         padding: 0.25rem;
     }
     
     .emotion-option {
         padding: 0.5rem;
-        min-width: 70px;
+        min-width: 60px;
+    }
+    
+    .emotion-emoji {
+        font-size: 2.25rem;
+    }
+    
+    .emotion-label {
+        font-size: 0.75rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Mobile responsive for emotion selector */
+@media (max-width: 480px) {
+    .container {
+        padding: 0.75rem;
+    }
+    
+    .emotion-selector {
+        gap: 4px;
+    }
+    
+    .emotion-option {
+        padding: 4px 2px;
+        min-width: 55px;
     }
     
     .emotion-emoji {
@@ -338,12 +396,23 @@ body {
     .emotion-label {
         font-size: 0.625rem;
     }
-    
-    .action-buttons {
-        flex-direction: column;
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .emotion-selector {
+        gap: 6px;
     }
     
-    .btn {
-        width: 100%;
+    .emotion-option {
+        min-width: 50px;
+    }
+    
+    .emotion-emoji {
+        font-size: 2.5rem;
+    }
+    
+    .emotion-label {
+        font-size: 0.75rem;
     }
 }
