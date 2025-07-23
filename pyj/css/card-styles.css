@@ -41,9 +41,9 @@ body {
 .app-container {
     position: relative;
     width: 100%;
-    max-width: 420px;
-    height: 850px;
-    max-height: 90vh;
+    max-width: 380px;
+    height: 750px;
+    max-height: 100vh;
     background-color: var(--color-cream);
     border-radius: var(--radius-lg);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

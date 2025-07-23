@@ -153,7 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- 이벤트 리스너 ---
 
     backBtn.addEventListener("click", () => {
-        window.history.back();
+        // window.history.back();
+        alert("홈으로 이동");
     });
 
     saveBtn.addEventListener("click", () => {
