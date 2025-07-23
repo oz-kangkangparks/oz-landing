@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalCharacterComment = document.getElementById(
         "modal-character-comment"
     );
+    const copyBtn = document.getElementById("copy-btn");
 
     // --- 함수 ---
 
@@ -200,6 +201,23 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === modalOverlay) {
             closeModal();
         }
+    });
+
+    copyBtn.addEventListener("click", () => {
+        // alert("앱에서 만날 수 있는 기능이에요");
+        window.navigator.clipboard.writeText(
+            `<오늘의 실패 명언>
+
+${quoteText.textContent}
+${quoteAuthor.textContent}     
+
+배경 이야기
+${quoteStory.textContent}
+
+${characterComment.textContent}`
+        );
+
+        alert("복사가 완료되었어요!");
     });
 
     // --- 앱 초기화 ---
