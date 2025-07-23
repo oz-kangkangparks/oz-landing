@@ -137,8 +137,55 @@ body.no-scroll {
     width: 24px;
     height: 24px;
 }
+
+/* Mobile Menu */
 .mobile-menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: var(--color-cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+}
+.mobile-menu.active {
+    transform: translateX(0);
+}
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
+}
+.mobile-menu li {
+    margin-bottom: 2.5rem;
+}
+.mobile-menu a {
+    font-size: 1.5rem;
+}
+.mobile-menu .nav-cta-button {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-navy);
+    color: var(--color-cream);
+    border-radius: var(--radius-full);
+}
+
+/* 메뉴 화면 내 닫기 버튼 스타일 */
+.menu-close-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem;
+}
+.menu-close-button svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-navy);
 }
 
 /* Hero Section */
@@ -209,7 +256,7 @@ body.no-scroll {
     border: none;
 }
 
-/* Empathy Section */
+/* General Section Title & Subtitle */
 .section-title {
     font-size: var(--font-size-3xl);
     font-weight: 700;
@@ -219,6 +266,8 @@ body.no-scroll {
     color: rgba(44, 62, 80, 0.8);
     margin-top: 1rem;
 }
+
+/* Empathy Section */
 #empathy .checklist {
     max-width: 650px;
     margin: 3rem auto 0 auto;
@@ -274,8 +323,8 @@ body.no-scroll {
 /* Features Mockup Styles */
 .mockup-phone {
     width: 100%;
-    max-width: 380px;
-    height: 750px;
+    max-width: 320px;
+    height: 560px;
     background-color: var(--color-gray-800);
     border-radius: 40px;
     padding: 12px;
@@ -287,18 +336,20 @@ body.no-scroll {
     height: 100%;
     background-color: var(--color-cream);
     border-radius: 28px;
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
 }
-.mockup-screen.dark {
-    background-color: var(--color-navy);
+.mockup-screen iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
-.mockup-header {
+.mockup-screen .mockup-header {
     font-weight: bold;
     margin-bottom: 1rem;
+    padding: 1.25rem 1.25rem 0;
 }
-.emotion-picker {
+.mockup-screen .emotion-picker {
+    margin: 0 1.25rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -306,41 +357,40 @@ body.no-scroll {
     padding: 0.75rem;
     border-radius: var(--radius-full);
 }
-.emotion-picker span {
+.mockup-screen .emotion-picker span {
     font-size: 1.75rem;
-    cursor: pointer;
 }
-.emotion-picker span.selected {
+.mockup-screen .emotion-picker span.selected {
     padding: 0.5rem;
     background-color: rgba(44, 62, 80, 0.1);
     border-radius: var(--radius-full);
 }
-.mockup-subheader {
+.mockup-screen .mockup-subheader {
     font-weight: bold;
     font-size: 0.875rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin: 1.5rem 1.25rem 0.5rem;
 }
-.graph-container {
-    flex-grow: 1;
+.mockup-screen .graph-container {
+    height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 0 0.5rem;
+    padding: 0 0.5rem 1.25rem;
     border-left: 2px solid rgba(44, 62, 80, 0.1);
     border-bottom: 2px solid rgba(44, 62, 80, 0.1);
+    margin: 0 1.25rem;
 }
-.bar {
+.mockup-screen .bar {
     width: 12px;
     border-radius: 4px 4px 0 0;
 }
-.notification-screen {
+.mockup-screen.notification-screen {
+    padding-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 4rem;
 }
-.notification {
+.mockup-screen .notification {
     width: 90%;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(5px);
@@ -348,69 +398,29 @@ body.no-scroll {
     box-shadow: var(--shadow-md);
     padding: 1rem;
 }
-.notification-header {
+.mockup-screen .notification-header {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
 }
-.notification-header span {
+.mockup-screen .notification-header span {
     font-size: 1.5rem;
     margin-right: 0.75rem;
 }
-.notification-header p {
+.mockup-screen .notification-header p {
     font-weight: bold;
     font-size: 0.875rem;
     margin: 0;
 }
-.notification-body p {
+.mockup-screen .notification-body p {
     margin: 0;
 }
-.notification-body p:first-child {
+.mockup-screen .notification-body p:first-child {
     font-weight: bold;
 }
-.notification-body p:last-child {
+.mockup-screen .notification-body p:last-child {
     font-size: 0.875rem;
     color: rgba(44, 62, 80, 0.8);
-}
-.quote-card-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: var(--color-cream);
-}
-.quote-card {
-    background-color: var(--color-cream);
-    color: var(--color-navy);
-    padding: 2rem;
-    border-radius: var(--radius-md);
-    text-align: center;
-    width: 100%;
-}
-.quote-card .quote {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: rgba(44, 62, 80, 0.8);
-}
-.quote-card .author {
-    font-weight: bold;
-    margin-top: 1rem;
-}
-.quote-actions {
-    display: flex;
-    margin-top: 1.5rem;
-    gap: 1.5rem;
-}
-.quote-actions svg {
-    width: 32px;
-    height: 32px;
-    color: rgba(255, 250, 240, 0.5);
-    cursor: pointer;
-    transition: color var(--transition-base);
-}
-.quote-actions svg:hover {
-    color: var(--color-cream);
 }
 
 /* Philosophy Section */
@@ -462,12 +472,9 @@ body.no-scroll {
     background-color: var(--color-navy);
     color: var(--color-cream);
 }
-
-/* [수정] CTA 섹션 안의 부제목에만 특별히 밝은 색상을 적용합니다. */
 .cta-section .section-subtitle {
     color: rgba(255, 250, 240, 0.8);
 }
-
 .cta-form {
     display: flex;
     max-width: 500px;
@@ -545,14 +552,12 @@ body.no-scroll {
     .mobile-menu-button {
         display: none;
     }
-    .mobile-menu {
-        display: none;
-    }
 
     /* Features 섹션 - 좌우 분할 */
     .feature-item {
         flex-direction: row;
         gap: 3rem;
+        text-align: left;
     }
     .feature-item.reverse {
         flex-direction: row-reverse;
