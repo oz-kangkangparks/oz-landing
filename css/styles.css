@@ -216,7 +216,7 @@ body.no-scroll {
     color: rgba(44, 62, 80, 0.8);
 }
 .hero .hero-button {
-    margin-top: 2.5rem;
+    margin: 2.5rem 0.5rem;
     display: inline-block;
     background-color: var(--color-navy);
     color: var(--color-cream);
