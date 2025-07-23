@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <title>홈 - 오늘은 퇴근하세요</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/home-styles.css" />
+    </head>
+    <body>
+        <div class="app-container">
+            <!-- 1. 화면 상단 헤더 (배경 없음) -->
+            <header class="app-header"></header>
+
+            <!-- 2. 메인 콘텐츠 영역 -->
+            <main class="home-content">
+                <div class="welcome-message">
+                    <h2>대표님, <br />오늘 하루는 어떠셨나요?</h2>
+                    <p>하루 한 번, 나의 감정을 기록하며 마음을 돌보세요.</p>
+                </div>
+
+                <button class="cta-button" id="log-emotion-btn">
+                    오늘의 감정 기록하기
+                </button>
+
+                <!-- 어제의 감정 요약 카드 -->
+                <div class="summary-card">
+                    <div class="card-icon-area">
+                        <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div class="card-text-area">
+                        <p class="card-title">어제의 감정</p>
+                        <p class="card-content">🙂 보통의 하루였네요.</p>
+                    </div>
+                </div>
+
+                <!-- 오늘의 쉼 제안 카드 -->
+                <div class="summary-card">
+                    <div class="card-icon-area">
+                        <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div class="card-text-area">
+                        <p class="card-title">오늘의 쉼 제안</p>
+                        <p class="card-content">따뜻한 차 한 잔 어떠세요?</p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- 3. 하단 네비게이션 바 -->
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item active" id="nav-home">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                        ></path>
+                    </svg>
+                    <span>홈</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-emotion-log">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                        ></path>
+                    </svg>
+                    <span>감정기록</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-alarm">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                        ></path>
+                    </svg>
+                    <span>퇴근알림</span>
+                </a>
+                <a href="../pyj/card.html" class="nav-item" id="nav-quotes">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                        ></path>
+                    </svg>
+                    <span>실패명언</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-stats">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                        ></path>
+                    </svg>
+                    <span>감정통계</span>
+                </a>
+            </nav>
+        </div>
+
+        <script src="js/home-main.js" defer></script>
+    </body>
+</html>
