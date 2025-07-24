@@ -112,8 +112,7 @@ body {
 }
 .emotion-selector {
     display: flex;
-    justify-content: center;
-    gap: 8px;
+    justify-content: space-between;
     margin-bottom: 2rem;
     width: 100%;
 }
