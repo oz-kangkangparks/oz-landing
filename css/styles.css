@@ -310,6 +310,9 @@ body.no-scroll {
     flex: 1;
     width: 100%;
 }
+.feature-image img {
+    height: 730px;
+}
 .feature-text h3 {
     font-size: var(--font-size-2xl);
     font-weight: 700;
