@@ -40,172 +40,214 @@
                             />
                         </svg>
                     </button>
-                    <div class="header-text">
-                        <h1>가장 다정한 퇴근 신호</h1>
-                        <p class="subtitle">일과 삶의 균형을 찾는 첫걸음입니다</p>
-                    </div>
+                    <h1>퇴근 알림</h1>
                     <div class="icon-placeholder"></div>
                 </header>
-                
+
                 <main class="main-content">
+                    <div class="form-header">
+                        <h1>가장 다정한 퇴근 신호</h1>
+                        <p class="subtitle">
+                            일과 삶의 균형을 찾는 첫걸음입니다
+                        </p>
+                    </div>
                     <div class="form-card">
-                    <form id="clock-out-form">
-                        <!-- 요일 선택 -->
-                        <div class="form-group">
-                            <label class="form-label">알림 받을 요일</label>
-                            <div class="weekday-selector">
-                                <label class="weekday-item">
-                                    <input type="checkbox" name="weekday" value="Sun" />
-                                    <span class="weekday-label">일</span>
-                                </label>
-                                <label class="weekday-item">
-                                    <input type="checkbox" name="weekday" value="Mon" />
-                                    <span class="weekday-label">월</span>
-                                </label>
-                                <label class="weekday-item">
-                                    <input type="checkbox" name="weekday" value="Tue" />
-                                    <span class="weekday-label">화</span>
-                                </label>
-                                <label class="weekday-item">
-                                    <input type="checkbox" name="weekday" value="Wed" />
-                                    <span class="weekday-label">수</span>
-                                </label>
-                                <label class="weekday-item">
-                                    <input type="checkbox" name="weekday" value="Thu" />
-                                    <span class="weekday-label">목</span>
-                                </label>
-                                <label class="weekday-item">
-                                    <input type="checkbox" name="weekday" value="Fri" />
-                                    <span class="weekday-label">금</span>
-                                </label>
-                                <label class="weekday-item">
-                                    <input type="checkbox" name="weekday" value="Sat" />
-                                    <span class="weekday-label">토</span>
-                                </label>
+                        <form id="clock-out-form">
+                            <!-- 요일 선택 -->
+                            <div class="form-group">
+                                <label class="form-label">알림 받을 요일</label>
+                                <div class="weekday-selector">
+                                    <label class="weekday-item">
+                                        <input
+                                            type="checkbox"
+                                            name="weekday"
+                                            value="Sun"
+                                        />
+                                        <span class="weekday-label">일</span>
+                                    </label>
+                                    <label class="weekday-item">
+                                        <input
+                                            type="checkbox"
+                                            name="weekday"
+                                            value="Mon"
+                                        />
+                                        <span class="weekday-label">월</span>
+                                    </label>
+                                    <label class="weekday-item">
+                                        <input
+                                            type="checkbox"
+                                            name="weekday"
+                                            value="Tue"
+                                        />
+                                        <span class="weekday-label">화</span>
+                                    </label>
+                                    <label class="weekday-item">
+                                        <input
+                                            type="checkbox"
+                                            name="weekday"
+                                            value="Wed"
+                                        />
+                                        <span class="weekday-label">수</span>
+                                    </label>
+                                    <label class="weekday-item">
+                                        <input
+                                            type="checkbox"
+                                            name="weekday"
+                                            value="Thu"
+                                        />
+                                        <span class="weekday-label">목</span>
+                                    </label>
+                                    <label class="weekday-item">
+                                        <input
+                                            type="checkbox"
+                                            name="weekday"
+                                            value="Fri"
+                                        />
+                                        <span class="weekday-label">금</span>
+                                    </label>
+                                    <label class="weekday-item">
+                                        <input
+                                            type="checkbox"
+                                            name="weekday"
+                                            value="Sat"
+                                        />
+                                        <span class="weekday-label">토</span>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- 퇴근 시간 설정 -->
-                        <div class="form-group">
-                            <label for="clock-out-time" class="form-label">퇴근 시간</label>
-                            <input
-                                type="time"
-                                id="clock-out-time"
-                                class="form-input"
-                                required
-                            />
-                            <p class="form-help">알림을 받고 싶은 퇴근 시간을 설정해주세요.</p>
-                        </div>
+                            <!-- 퇴근 시간 설정 -->
+                            <div class="form-group">
+                                <label for="clock-out-time" class="form-label"
+                                    >퇴근 시간</label
+                                >
+                                <input
+                                    type="time"
+                                    id="clock-out-time"
+                                    class="form-input"
+                                    required
+                                />
+                                <p class="form-help">
+                                    알림을 받고 싶은 퇴근 시간을 설정해주세요.
+                                </p>
+                            </div>
 
-                        <!-- 버튼 그룹 -->
-                        <div class="button-group">
-                            <button type="submit" class="btn btn-primary">
-                                저장
-                            </button>
-                            <button type="button" id="test-message-btn" class="btn btn-secondary">
-                                메시지 예시
-                            </button>
-                        </div>
-                    </form>
+                            <!-- 버튼 그룹 -->
+                            <div class="button-group">
+                                <button type="submit" class="btn btn-primary">
+                                    저장
+                                </button>
+                                <button
+                                    type="button"
+                                    id="test-message-btn"
+                                    class="btn btn-secondary"
+                                >
+                                    메시지 예시
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </main>
             </div>
+            <!-- 하단 네비게이션 바 -->
+            <nav class="bottom-nav">
+                <a href="../pyj/home.html" class="nav-item" id="nav-home">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                        ></path>
+                    </svg>
+                    <span>홈</span>
+                </a>
+                <a href="index.html" class="nav-item" id="nav-emotion-log">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                        ></path>
+                    </svg>
+                    <span>감정기록</span>
+                </a>
+                <a href="clock-out.html" class="nav-item active" id="nav-alarm">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                        ></path>
+                    </svg>
+                    <span>퇴근알림</span>
+                </a>
+                <a href="../pyj/card.html" class="nav-item" id="nav-quotes">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                        ></path>
+                    </svg>
+                    <span>실패명언</span>
+                </a>
+                <a href="../pyj/stats.html" class="nav-item" id="nav-stats">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                        ></path>
+                    </svg>
+                    <span>감정통계</span>
+                </a>
+            </nav>
         </div>
 
-        <!-- 메시지 결과 화면 -->
+        <!-- 메시지 예시 화면 -->
         <div id="message-screen" class="screen">
-            <div class="container">
-                <header class="app-header">
-                    <button id="back-button" class="icon-button" aria-label="뒤로 가기">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </button>
-                    <div class="header-text">
-                        <h1>퇴근 메시지</h1>
-                        <p class="subtitle">오늘도 수고하셨습니다</p>
-                    </div>
-                    <div class="icon-placeholder"></div>
-                </header>
+            <header class="app-header">
+                <div class="icon-placeholder"></div>
+                <h1>퇴근 알림 예시</h1>
+                <button
+                    id="close-result-btn"
+                    class="icon-button"
+                    aria-label="닫기"
+                >
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                </button>
+            </header>
+            <main class="message-screen-area">
+                <div class="result-header">
+                    <h1>오늘도 수고하셨습니다</h1>
+                </div>
                 <div class="message-result-content">
                     <div class="result-image">
-                        <img src="assets/images/나는자유다.jpg" alt="자유로운 이미지" />
+                        <img
+                            src="assets/images/나는자유다.jpg"
+                            alt="자유로운 이미지"
+                        />
                     </div>
                     <div class="result-message">
                         <p id="display-message"></p>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
 
         <!-- 설정 저장 알림 -->
         <div id="save-notification" class="save-notification hidden">
             설정이 저장되었습니다!
         </div>
-
-        <!-- 하단 네비게이션 바 -->
-        <nav class="bottom-nav">
-            <a href="../pyj/home.html" class="nav-item" id="nav-home">
-                <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                        d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-                    ></path>
-                </svg>
-                <span>홈</span>
-            </a>
-            <a
-                href="index.html"
-                class="nav-item"
-                id="nav-emotion-log"
-            >
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                    ></path>
-                </svg>
-                <span>감정기록</span>
-            </a>
-            <a
-                href="clock-out.html"
-                class="nav-item active"
-                id="nav-alarm"
-            >
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                    ></path>
-                </svg>
-                <span>퇴근알림</span>
-            </a>
-            <a href="../pyj/card.html" class="nav-item" id="nav-quotes">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                    ></path>
-                </svg>
-                <span>실패명언</span>
-            </a>
-            <a href="#" class="nav-item" id="nav-stats">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    ></path>
-                </svg>
-                <span>감정통계</span>
-            </a>
-        </nav>
 
         <!-- JavaScript -->
         <script src="js/clock-out.js"></script>

@@ -59,16 +59,20 @@
     margin: 0;
     padding: 0;
 }
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    height: 100%;
+    overflow: hidden; /* 전체 페이지 스크롤 방지 */
 }
 body {
     font-family: var(--font-family);
     background-color: var(--color-cream);
     color: var(--color-navy);
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
 }
 img,
 picture,
@@ -97,9 +101,14 @@ button {
 /* Utility Classes */
 .container {
     width: 100%;
-    padding: 1rem;
+    max-width: 380px;
+    height: 750px;
+    max-height: 100vh;
     box-sizing: border-box;
     padding-bottom: 80px; /* Account for fixed bottom nav */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 .text-center {
     text-align: center;
@@ -110,26 +119,22 @@ button {
 
 /* App Header */
 .app-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-/* Update header layout for back button */
-.app-header {
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 1.25rem;
+}
+.app-header h1 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--color-navy);
+    margin: 0;
 }
 
 .header-text {
     text-align: center;
     flex: 1;
-}
-
-.app-header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
 }
 
 .subtitle {
@@ -149,16 +154,29 @@ button {
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
     z-index: 10;
+    flex-direction: column;
 }
 .screen.active {
     transform: translateX(0);
+    display: flex;
 }
 
 /* Main Content */
 .main-content {
-    padding: 0 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    overflow-y: auto;
 }
 
+.form-header {
+    margin-bottom: 1.5rem;
+}
+
+.form-header h1 {
+    font-size: 1.25rem;
+}
 /* Remove old header section styles - now using app-header */
 
 /* Form Card */
@@ -276,12 +294,11 @@ button {
 
 /* Message Result Content */
 .message-result-content {
-    padding: 1rem;
     padding-bottom: 100px; /* Extra padding for bottom nav */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-xl);
+    gap: 1.5rem;
     animation: fadeIn 0.5s ease-in-out;
     min-height: calc(100vh - 200px); /* Ensure content is scrollable */
 }
@@ -295,6 +312,21 @@ button {
         transform: translateY(0);
     }
 }
+
+.message-screen-area {
+    padding: 0 1.5rem 1.5rem; /* 헤더와의 간격을 위해 상단 패딩 제거 */
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.result-header {
+    padding: 1.5rem 0;
+}
+
+.result-header h1 {
+    font-size: 1.25rem;
+}
+
 .result-image {
     width: 100%;
     max-width: 400px;
@@ -385,6 +417,13 @@ button {
     }
 }
 
+/* 랜딩페이지용 */
+@media (max-width: 380px) {
+    .container {
+        padding: 0;
+    }
+}
+
 /* --- Bottom Navigation Bar --- */
 .bottom-nav {
     position: fixed;
@@ -450,4 +489,3 @@ body {
 .icon-placeholder {
     width: 40px;
 }
-
