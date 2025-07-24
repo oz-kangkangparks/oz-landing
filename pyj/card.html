@@ -75,9 +75,8 @@
                             <p id="character-comment"></p>
                         </div>
                     </div>
-                </main>
 
-                <footer class="app-footer">
+                    <!-- 버튼들을 카드 아래로 이동 -->
                     <div class="action-buttons">
                         <button id="save-btn" class="action-btn">
                             <svg
@@ -105,16 +104,105 @@
                             <span id="save-btn-text">보관하기</span>
                         </button>
                         <button id="copy-btn" class="action-btn">
-                            <svg class="icon-copy" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                            <svg class="icon-copied hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <svg
+                                class="icon-copy"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                ></path>
+                            </svg>
                             <span id="copy-btn-text">복사하기</span>
                         </button>
-                        </button>
                     </div>
-                </footer>
+                </main>
+
+                <!-- 하단 네비게이션 바 추가 -->
+                <nav class="bottom-nav">
+                    <a href="../pyj/home.html" class="nav-item" id="nav-home">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                            ></path>
+                        </svg>
+                        <span>홈</span>
+                    </a>
+                    <a
+                        href="../kangjinil/index.html"
+                        class="nav-item"
+                        id="nav-emotion-log"
+                    >
+                        <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                            ></path>
+                        </svg>
+                        <span>감정기록</span>
+                    </a>
+                    <a
+                        href="../kangjinil/clock-out.html"
+                        class="nav-item"
+                        id="nav-alarm"
+                    >
+                        <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                            ></path>
+                        </svg>
+                        <span>퇴근알림</span>
+                    </a>
+                    <a href="#" class="nav-item active" id="nav-quotes">
+                        <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                            ></path>
+                        </svg>
+                        <span>실패명언</span>
+                    </a>
+                    <a href="../pyj/stats.html" class="nav-item" id="nav-stats">
+                        <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                            ></path>
+                        </svg>
+                        <span>감정통계</span>
+                    </a>
+                </nav>
             </div>
 
-            <!-- 보관함 화면 -->
             <div id="archive-view" class="view">
                 <header class="app-header">
                     <div class="icon-placeholder"></div>
@@ -124,7 +212,6 @@
                         class="icon-button"
                         aria-label="닫기"
                     >
-                        <!-- 'X' 아이콘으로 수정됨 -->
                         <svg
                             fill="none"
                             viewBox="0 0 24 24"
@@ -148,7 +235,6 @@
                 </main>
             </div>
 
-            <!-- 명언 상세 보기 팝업 (모달) -->
             <div id="modal-overlay" class="modal-overlay hidden">
                 <div id="modal-content" class="modal-content">
                     <button
