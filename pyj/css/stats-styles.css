@@ -1,0 +1,263 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --color-navy: #2c3e50;
+    --color-cream: #fffaf0;
+    --color-white: #ffffff;
+    --color-gray-200: #e9ecef;
+    --color-gray-600: #6c757d;
+    --color-gray-800: #343a40;
+    --font-family: "Gowun Dodum", sans-serif;
+    --radius-lg: 1rem;
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --transition-base: 300ms ease-in-out;
+    /* 감정 색상 */
+    --emotion-happy: #f9d5a7;
+    --emotion-neutral: #a7c5eb;
+    --emotion-sad: #b3cdd1;
+    --emotion-angry: #ffb5b5;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--color-gray-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- App Layout --- */
+.app-container {
+    width: 100%;
+    max-width: 380px;
+    height: 750px;
+    max-height: 100vh;
+    background-color: var(--color-cream);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.app-header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+}
+.app-header h1 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--color-navy);
+    margin: 0;
+}
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--color-gray-600);
+}
+.icon-button svg {
+    width: 24px;
+    height: 24px;
+}
+.icon-placeholder {
+    width: 40px;
+}
+
+.stats-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+/* --- Stats Content Styles --- */
+.time-selector {
+    display: flex;
+    background-color: #ede4d9;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+.time-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.375rem;
+    font-weight: bold;
+    color: var(--color-gray-600);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+.time-btn.active {
+    background-color: var(--color-white);
+    color: var(--color-navy);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-md);
+}
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+}
+
+.chart-area {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.pie-chart {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--emotion-happy) 0% 35%,
+        var(--emotion-neutral) 35% 75%,
+        var(--emotion-sad) 75% 90%,
+        var(--emotion-angry) 90% 100%
+    );
+}
+.legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.legend-dot.happy {
+    background-color: var(--emotion-happy);
+}
+.legend-dot.neutral {
+    background-color: var(--emotion-neutral);
+}
+.legend-dot.sad {
+    background-color: var(--emotion-sad);
+}
+.legend-dot.angry {
+    background-color: var(--emotion-angry);
+}
+
+.comment-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #f8f1e9;
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+.comment-area span {
+    font-size: 2rem;
+}
+.comment-area p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-gray-800);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    text-align: center;
+}
+.day-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--color-gray-600);
+    padding-bottom: 0.5rem;
+}
+.day-cell {
+    font-size: 0.875rem;
+    font-weight: bold;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.day-cell:not(.empty) {
+    background-color: #ede4d9;
+}
+.day-cell.emotion-happy {
+    background-color: var(--emotion-happy);
+}
+.day-cell.emotion-neutral {
+    background-color: var(--emotion-neutral);
+}
+.day-cell.emotion-sad {
+    background-color: var(--emotion-sad);
+}
+.day-cell.emotion-angry {
+    background-color: var(--emotion-angry);
+}
+
+.cta-button {
+    width: 100%;
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-base);
+}
+
+/* --- Bottom Navigation Bar --- */
+.bottom-nav {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color-white);
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03);
+}
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    color: #aeb8c2;
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+.nav-item svg {
+    width: 24px;
+    height: 24px;
+}
+.nav-item span {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.nav-item.active {
+    color: var(--color-navy);
+}

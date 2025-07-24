@@ -35,6 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     navStats.addEventListener("click", () => {
-        alert("감정 통계 화면으로 이동합니다.");
+        // alert("감정 통계 화면으로 이동합니다.");
     });
 });
