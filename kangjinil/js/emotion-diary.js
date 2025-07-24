@@ -57,6 +57,12 @@ function showRecordScreen() {
 
 // 목록 화면 표시
 function showListScreen() {
+    // 선택된 감정 선택 해제
+    document
+        .querySelector(".emotion-option.selected")
+        .classList.remove("selected");
+
+    // 화면 전환
     document.getElementById("recordScreen").classList.remove("active");
     document.getElementById("listScreen").classList.add("active");
 
