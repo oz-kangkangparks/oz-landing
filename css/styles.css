@@ -114,7 +114,7 @@ body.no-scroll {
     padding: 1.5rem 0;
 }
 .navbar.scrolled {
-    background-color: rgba(255, 250, 240, 0.95);
+    background-color: rgba(255, 250, 240, 0.98);
     box-shadow: var(--shadow-md);
     padding: 1rem 0;
 }
@@ -124,8 +124,15 @@ body.no-scroll {
     align-items: center;
 }
 .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
     font-size: 1.25rem;
     font-weight: bold;
+}
+.logo-image {
+    height: 55px;
+    width: auto;
 }
 .nav-menu {
     display: none;
@@ -174,8 +181,6 @@ body.no-scroll {
     color: var(--color-cream);
     border-radius: var(--radius-full);
 }
-
-/* 메뉴 화면 내 닫기 버튼 스타일 */
 .menu-close-button {
     position: absolute;
     top: 1.5rem;
@@ -312,6 +317,8 @@ body.no-scroll {
 }
 .feature-image img {
     height: 730px;
+    object-fit: cover;
+    border-radius: 28px;
 }
 .feature-text h3 {
     font-size: var(--font-size-2xl);
@@ -333,97 +340,6 @@ body.no-scroll {
     padding: 12px;
     box-shadow: var(--shadow-lg);
     margin: 0 auto;
-}
-.mockup-screen {
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-cream);
-    border-radius: 28px;
-    overflow: hidden;
-}
-.mockup-screen iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-.mockup-screen .mockup-header {
-    font-weight: bold;
-    margin-bottom: 1rem;
-    padding: 1.25rem 1.25rem 0;
-}
-.mockup-screen .emotion-picker {
-    margin: 0 1.25rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 0.75rem;
-    border-radius: var(--radius-full);
-}
-.mockup-screen .emotion-picker span {
-    font-size: 1.75rem;
-}
-.mockup-screen .emotion-picker span.selected {
-    padding: 0.5rem;
-    background-color: rgba(44, 62, 80, 0.1);
-    border-radius: var(--radius-full);
-}
-.mockup-screen .mockup-subheader {
-    font-weight: bold;
-    font-size: 0.875rem;
-    margin: 1.5rem 1.25rem 0.5rem;
-}
-.mockup-screen .graph-container {
-    height: 77%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 0.5rem 1.25rem;
-    border-left: 2px solid rgba(44, 62, 80, 0.1);
-    border-bottom: 2px solid rgba(44, 62, 80, 0.1);
-    margin: 0 1.25rem;
-}
-.mockup-screen .bar {
-    width: 12px;
-    border-radius: 4px 4px 0 0;
-}
-.mockup-screen.notification-screen {
-    padding-top: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.mockup-screen .notification {
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
-    padding: 1rem;
-}
-.mockup-screen .notification-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-.mockup-screen .notification-header span {
-    font-size: 1.5rem;
-    margin-right: 0.75rem;
-}
-.mockup-screen .notification-header p {
-    font-weight: bold;
-    font-size: 0.875rem;
-    margin: 0;
-}
-.mockup-screen .notification-body p {
-    margin: 0;
-}
-.mockup-screen .notification-body p:first-child {
-    font-weight: bold;
-}
-.mockup-screen .notification-body p:last-child {
-    font-size: 0.875rem;
-    color: rgba(44, 62, 80, 0.8);
 }
 
 /* Philosophy Section */
@@ -517,7 +433,25 @@ body.no-scroll {
 .footer {
     padding: var(--spacing-xl) 0;
     color: rgba(44, 62, 80, 0.7);
+    font-size: 0.875rem;
 }
+
+/* [추가] 푸터 로고 스타일 */
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--font-size-lg);
+    color: var(--color-navy);
+}
+.logo-image-footer {
+    height: 40px;
+    width: auto;
+}
+
 .footer-links {
     margin-top: 0.5rem;
 }
@@ -538,7 +472,6 @@ body.no-scroll {
 /* --- Media Queries (반응형) --- */
 
 @media (min-width: 768px) {
-    /* 네비게이션 */
     .nav-menu {
         display: flex;
         align-items: center;
@@ -555,8 +488,6 @@ body.no-scroll {
     .mobile-menu-button {
         display: none;
     }
-
-    /* Features 섹션 - 좌우 분할 */
     .feature-item {
         flex-direction: row;
         gap: 3rem;
@@ -568,8 +499,6 @@ body.no-scroll {
     .feature-text {
         text-align: left;
     }
-
-    /* Philosophy 섹션 - 좌우 분할 */
     #philosophy .philosophy-wrapper {
         flex-direction: row;
         text-align: left;
@@ -580,7 +509,6 @@ body.no-scroll {
 }
 
 @media (min-width: 992px) {
-    /* Hero 섹션 - 좌우 분할 */
     .hero-container {
         flex-direction: row;
         text-align: left;
