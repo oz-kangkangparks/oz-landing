@@ -14,29 +14,41 @@
         />
 
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="clock-out.css" />
+        <link rel="stylesheet" href="css/clock-out.css" />
     </head>
     <body>
-        <!-- 상단 메뉴 -->
-        <nav class="navbar">
-            <div class="container nav-container">
-                <a href="../index.html" class="nav-logo">오늘은 퇴근하세요</a>
-            </div>
-        </nav>
-
         <!-- 메인 화면 -->
         <div id="main-screen" class="screen active">
-            <main class="main-content">
-                <div class="container">
-                <div class="header-section text-center">
-                    <h1 class="page-title">가장 다정한 퇴근 신호</h1>
-                    <p class="page-subtitle">
-                        매일 정해진 시간에 따뜻한 퇴근 메시지를 받아보세요.<br />
-                        일과 삶의 균형을 찾는 첫걸음입니다.
-                    </p>
-                </div>
-
-                <div class="form-card">
+            <div class="container">
+                <header class="app-header">
+                    <button
+                        id="back-btn"
+                        class="icon-button"
+                        aria-label="뒤로 가기"
+                        onclick="window.history.back()"
+                    >
+                        <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M15 19l-7-7 7-7"
+                            />
+                        </svg>
+                    </button>
+                    <div class="header-text">
+                        <h1>가장 다정한 퇴근 신호</h1>
+                        <p class="subtitle">일과 삶의 균형을 찾는 첫걸음입니다</p>
+                    </div>
+                    <div class="icon-placeholder"></div>
+                </header>
+                
+                <main class="main-content">
+                    <div class="form-card">
                     <form id="clock-out-form">
                         <!-- 요일 선택 -->
                         <div class="form-group">
@@ -96,27 +108,32 @@
                         </div>
                     </form>
                     </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </div>
 
         <!-- 메시지 결과 화면 -->
         <div id="message-screen" class="screen">
-            <div class="message-screen-header">
-                <button id="back-button" class="back-button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                    돌아가기
-                </button>
-                <h2 class="message-screen-title">퇴근 메시지</h2>
-            </div>
-            <div class="message-result-content">
-                <div class="result-image">
-                    <img src="assets/images/나는자유다.jpg" alt="자유로운 이미지" />
-                </div>
-                <div class="result-message">
-                    <p id="display-message"></p>
+            <div class="container">
+                <header class="app-header">
+                    <button id="back-button" class="icon-button" aria-label="뒤로 가기">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="header-text">
+                        <h1>퇴근 메시지</h1>
+                        <p class="subtitle">오늘도 수고하셨습니다</p>
+                    </div>
+                    <div class="icon-placeholder"></div>
+                </header>
+                <div class="message-result-content">
+                    <div class="result-image">
+                        <img src="assets/images/나는자유다.jpg" alt="자유로운 이미지" />
+                    </div>
+                    <div class="result-message">
+                        <p id="display-message"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,7 +143,71 @@
             설정이 저장되었습니다!
         </div>
 
+        <!-- 하단 네비게이션 바 -->
+        <nav class="bottom-nav">
+            <a href="../pyj/home.html" class="nav-item" id="nav-home">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                    ></path>
+                </svg>
+                <span>홈</span>
+            </a>
+            <a
+                href="index.html"
+                class="nav-item"
+                id="nav-emotion-log"
+            >
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                    ></path>
+                </svg>
+                <span>감정기록</span>
+            </a>
+            <a
+                href="clock-out.html"
+                class="nav-item active"
+                id="nav-alarm"
+            >
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                    ></path>
+                </svg>
+                <span>퇴근알림</span>
+            </a>
+            <a href="../pyj/card.html" class="nav-item" id="nav-quotes">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                    ></path>
+                </svg>
+                <span>실패명언</span>
+            </a>
+            <a href="#" class="nav-item" id="nav-stats">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    ></path>
+                </svg>
+                <span>감정통계</span>
+            </a>
+        </nav>
+
         <!-- JavaScript -->
-        <script src="clock-out.js"></script>
+        <script src="js/clock-out.js"></script>
     </body>
 </html>

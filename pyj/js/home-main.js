@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 오늘의 감정 기록하기 버튼
     logEmotionBtn.addEventListener("click", () => {
         //alert("감정 기록 화면으로 이동합니다.");
-        this.location.href = "../../kangjinil/index.html";
+        this.location.href = "../kangjinil/index.html";
     });
 
     // 하단 네비게이션
