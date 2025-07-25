@@ -78,7 +78,7 @@ input {
     padding: 0 var(--spacing-md);
 }
 .section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-3xl) 0;
 }
 .text-center {
     text-align: center;
