@@ -448,6 +448,9 @@ body {
     .container {
         padding: 0;
     }
+    .emotion-selector {
+        padding: 0;
+    }
 }
 
 /* Very small screens */
